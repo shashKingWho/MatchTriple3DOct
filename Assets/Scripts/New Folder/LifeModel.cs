@@ -55,7 +55,7 @@ public class LifeModel : MonoBehaviour
             Lives--;
             PlayerPrefs.SetInt("Lives", Lives);
 
-            // If lives become 0, start tracking life regeneration immediately
+            // If lives become 0, we need to start updating life regeneration
             if (Lives < MaxLives)
             {
                 lastLifeRegenerationTime = DateTime.Now;

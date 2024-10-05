@@ -57,6 +57,8 @@ public class LevelManager : MonoBehaviour
     public void ShowGameOver()
     {
         HideAllUI();
+        GameController.Instance.CameraShakeNow();
+
         if (gameOverUI != null)
             gameOverUI.SetActive(true);
     }
@@ -70,8 +72,7 @@ public class LevelManager : MonoBehaviour
 
     // Call when returning to the main menu
     public void ReturnToMainMenu()
-    {
-        // Assuming you load the main menu scene by name
+    {        
         GameController.Instance.LoadLevel("MainMenu");
     }
 }

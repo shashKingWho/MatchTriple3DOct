@@ -30,7 +30,7 @@ public class LifeView : MonoBehaviour
     {
         TimeSpan timeSinceLastLife = DateTime.Now - DateTime.Parse(PlayerPrefs.GetString("LastLifeTime", DateTime.Now.ToString()));
         // TESTING
-Debug.Log("UpdateTimer Lives: " + LifeModel.MaxLives);
+        Debug.Log("UpdateTimer Lives: " + LifeModel.MaxLives);
 
         if (lifeModel.Lives < LifeModel.MaxLives)
         {
